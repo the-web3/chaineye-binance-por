@@ -132,7 +132,8 @@ if __name__ == '__main__':
 
 该计划的一个重要微妙之处在于可能出现负余额：如果一家拥有 1390 ETH 客户余额但只有 890 ETH 储备金的交易所试图通过在某处的虚假账户下添加 -500 ETH 余额来弥补差额，事实证明，这种可能性并没有破坏方案，尽管这就是我们特别需要 Merkle sum 树而不是常规 Merkle 树的原因。假设 Henry 是交易所控制的假账户，交易所将 -500 ETH 放在那里：
 
-[![merkle_tree_2](images/merkle_tree_2.png)]([https://github.com/savour-labs](https://github.com/0xchaineye/chaineye-binance-por/))
+
+[![merkle_tree_2](https://github.com/0xchaineye/chaineye-binance-por/blob/main/images/merkle_tree_2.png)](https://github.com/0xchaineye/chaineye-binance-por/)
 
 Greta 的证明验证会失败：交易所必须给她 Henry 的 -500 ETH 节点，她会认为该节点无效而拒绝。Eve 和 Fred 的 proof 验证也会失败，因为 Henry 上面的中间节点总共有 -230 ETH，所以也是无效的！为了摆脱盗窃，交易所必须希望整个树的右半部分都没有人检查他们的余额证明。
 
@@ -144,13 +145,13 @@ ZK-SNARKs 是一项强大的技术。ZK-SNARKs 之于密码学可能就像 Trans
 
 我们能做的最简单的事情就是将所有用户的存款放入一棵 Merkle 树中（或者更简单，一个KZG commitment），并使用 ZK-SNARK 来证明树中的所有余额都是非负的，加起来为一些声称的价值。如果我们为隐私添加一层散列，则提供给每个用户的 Merkle 分支（或 KZG 证明）将不会透露任何其他用户的余额。
 
-[![merkle_tree_3](images/merkle_tree_3.png)]([https://github.com/savour-labs](https://github.com/0xchaineye/chaineye-binance-por/))
+[![merkle_tree_3](https://github.com/0xchaineye/chaineye-binance-por/blob/main/images/merkle_tree_3.png)](https://github.com/0xchaineye/chaineye-binance-por/)
 
 我们可以用一个专用的 ZK-SNARK 来证明上述 KZG 中余额的和和非负性。这是一个简单的示例方法来执行此操作。我们引入一个辅助多项式I(x)，它“建立了每个余额的位”（为了举例，我们假设余额低于 2^15
 ) 并且每第 16 个位置跟踪一个带有偏移量的运行总计，以便只有当实际总计与声明的总计相匹配时，它的总和才为零。如果 z 是 128 阶单位根，我们可以证明方程：
 
 
-[![kzg](images/kzg.png)](https://github.com/0xchaineye/chaineye-binance-por/)
+[![kzg](https://github.com/0xchaineye/chaineye-binance-por/blob/main/images/kzg.png)](https://github.com/0xchaineye/chaineye-binance-por/)
 
 有效设置的第一个值 I(s)会是 `0 0 0 0` `0 0 0 0` `0 0 1 2` `5 10 20 -165` `0 0 0 0 ` `0 0 0 0` ` 0 1 3 6` `12 25 50 -300`...
 
@@ -186,7 +187,7 @@ ZK-SNARKs 是一项强大的技术。ZK-SNARKs 之于密码学可能就像 Trans
 
 对此的第一个主要尝试是Plasma，这是一种在 2017 年和 2018 年在以太坊研究圈流行的扩展解决方案。Plasma 的工作原理是将余额拆分为一组单独的“硬币”，其中每个硬币都分配有一个索引并存在于Plasma 区块的 Merkle 树中的特定位置。进行有效的代币转移需要将交易放入树的正确位置，树的根在链上发布。
 
-[![plasmacash](images/plasmacash.png)]([https://github.com/savour-labs](https://github.com/0xchaineye/chaineye-binance-por/))
+[![plasmacash](https://github.com/0xchaineye/chaineye-binance-por/blob/main/images/plasmacash.png)](https://github.com/0xchaineye/chaineye-binance-por/)
 Plasma 一个版本的过度简化图。代币保存在智能合约中，该合约在提款时执行 Plasma 协议的规则。
 
 OmiseGo 试图基于该协议进行去中心化交易，但从那时起他们就转向了其他想法——就此而言，Plasma Group 本身也是如此，它现在是乐观的 EVM 汇总项目Optimism。
@@ -219,11 +220,6 @@ Plasma 想法的更现代版本是 Starkware 所说的validium：基本上与 ZK
 两种类型的交易所都将继续存在，而提高托管交易所安全性的最简单的向后兼容方式是添加储备证明。这包括资产证明和负债证明的组合。为两者制定良好的协议存在技术挑战，但我们可以而且应该尽可能地在两者上取得进展，并尽可能开源软件和流程，以便所有交易所都能受益。
 
 从长远来看，我希望我们越来越接近于所有交易所都是非托管的，至少在加密方面是这样。钱包恢复将存在，并且可能需要为处理小额交易的新用户以及出于法律原因需要此类安排的机构提供高度集中的恢复选项，但这可以在钱包层而不是在交易所本身内完成. 在法定货币方面，传统银行系统和加密生态系统之间的移动可以通过 USDC 等资产支持的稳定币原生的进/出流程来完成。但是，我们还需要一段时间才能完全到达那里。
-
-
-
-
-
 
 
 
