@@ -167,7 +167,7 @@ ZK-SNARKs 是一项强大的技术。ZK-SNARKs 之于密码学可能就像 Trans
 
 - 冷库处理
 - 抵押物两用
-- 
+
 出于安全原因，大多数交易所将大部分客户资金保存在“冷库”中：在离线计算机上，交易需要手动签署并转移到互联网上。字面上的气隙是常见的：我曾经用于个人资金的冷存储设置涉及一台永久离线的计算机生成一个包含签名交易的 QR 码，我会从我的手机上扫描它。由于涉及高价值，交易所使用的安全协议更加疯狂，并且通常涉及在多个设备之间使用多方计算，以进一步降低黑客攻击单个设备泄露密钥的可能性。鉴于这种设置，即使是制作一条额外的消息来证明对地址的控制也是一项昂贵的操作！
 
 交易所可以采取多种途径：
@@ -198,7 +198,7 @@ Plasma 想法的更现代版本是 Starkware 所说的validium：基本上与 ZK
 
 这一切都非常好：远非 CEX 与 DEX 是二元对立的，事实证明，有各种各样的选择，包括各种形式的混合中心化，你可以获得一些好处，比如效率，但仍然有很多加密护栏来防止中心化运营商免于从事大多数形式的滥用行为。
 
-[![spectrum](images/spectrum.png)]([https://github.com/savour-labs](https://github.com/0xchaineye/chaineye-binance-por/))
+[![spectrum](https://github.com/0xchaineye/chaineye-binance-por/blob/main/images/spectrum.png)](https://github.com/0xchaineye/chaineye-binance-por/)
 
 但是值得解决这个设计空间右半部分的基本问题：处理用户错误。到目前为止，最重要的错误类型是：如果用户忘记密码、丢失设备、被黑客入侵或无法访问其帐户怎么办？
 
