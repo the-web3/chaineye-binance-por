@@ -21,7 +21,7 @@ Chainey 社群： 官网 chaineye.info | Chaineye Rust 教程 | 微信: LGZAXE, 
 
 证明存款的最简单方法是简单地发布(username, balance)货币对列表。每个用户都可以检查他们的余额是否包含在列表中，任何人都可以检查完整列表以查看（i）每个余额都是非负的，并且（ii）总金额是索赔金额。当然，这会破坏隐私，所以我们可以稍微改变一下方案：发布一个(hash(username, salt), balance)配对列表，然后私下向每个用户发送他们的salt值。但即使这样也泄露了余额，它泄露了余额变化的模式。保护隐私的愿望将我们带到了下一个发明：Merkle 树技术。
 
-[![merkle_tree_1](images/merkle_tree_1.png)](https://github.com/0xchaineye/chaineye-binance-por/)
+[![merkle_tree_1](https://github.com/0xchaineye/chaineye-binance-por/blob/main/images/merkle_tree_1.png)](https://github.com/0xchaineye/chaineye-binance-por/)
 绿色：Charlie 的节点。蓝色：Charlie 将收到的节点作为他证明的一部分。黄色：根节点，公开给大家看。
 
 
