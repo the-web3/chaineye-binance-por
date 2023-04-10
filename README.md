@@ -9,7 +9,7 @@
 
 #### 1.[vitalik 中心化交易的资产证明解决方案](https://github.com/0xchaineye/chaineye-binance-por/tree/main/00-vitalik-proof-of-solvency#readme)
 #### 2.[binance 资产证明介绍](https://github.com/0xchaineye/chaineye-binance-por/tree/main/01-introduce#readme)
-#### 3.[Binance por 解决方案]()
+#### 3.[Binance por 解决方案](https://github.com/0xchaineye/chaineye-binance-por/blob/main/02-binance-por-detail/readme.md)
 #### 4.[binance por 项目架构预览]()
 #### 5.[binance 电路代码详解]()
 #### 6.[binance prover 代码详解]()
