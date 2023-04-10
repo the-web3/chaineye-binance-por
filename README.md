@@ -10,11 +10,12 @@
 #### 1.[vitalik 中心化交易的资产证明解决方案](https://github.com/0xchaineye/chaineye-binance-por/tree/main/00-vitalik-proof-of-solvency#readme)
 #### 2.[binance 资产证明介绍](https://github.com/0xchaineye/chaineye-binance-por/tree/main/01-introduce#readme)
 #### 3.[Binance por 解决方案](https://github.com/0xchaineye/chaineye-binance-por/blob/main/02-binance-por-detail/readme.md)
-#### 4.[binance por 项目架构预览](https://github.com/0xchaineye/chaineye-binance-por/blob/main/03-binance-por-project-introduce/readme.md)
-#### 5.[binance 电路代码详解](https://github.com/0xchaineye/chaineye-binance-por/blob/main/04-circum-code/readme.md)
-#### 6.[binance prover 代码详解](https://github.com/0xchaineye/chaineye-binance-por/blob/main/05-prover/readme.md)
-#### 7.[binance verifier 代码详解](https://github.com/0xchaineye/chaineye-binance-por/blob/main/06-verifier/readme.md)
-#### 8.[总结](https://github.com/0xchaineye/chaineye-binance-por/blob/main/07-finish/readme.md)
+#### 4.[proof-of-solvency](https://github.com/0xchaineye/chaineye-binance-por/blob/main/02.1-proof-of-solvency/readme.md)
+#### 5.[binance por 项目架构预览](https://github.com/0xchaineye/chaineye-binance-por/blob/main/03-binance-por-project-introduce/readme.md)
+#### 6.[binance 电路代码详解](https://github.com/0xchaineye/chaineye-binance-por/blob/main/04-circum-code/readme.md)
+#### 7.[binance prover 代码详解](https://github.com/0xchaineye/chaineye-binance-por/blob/main/05-prover/readme.md)
+#### 8.[binance verifier 代码详解](https://github.com/0xchaineye/chaineye-binance-por/blob/main/06-verifier/readme.md)
+#### 9.[总结](https://github.com/0xchaineye/chaineye-binance-por/blob/main/07-finish/readme.md)
 
 
 ## 联系作者
