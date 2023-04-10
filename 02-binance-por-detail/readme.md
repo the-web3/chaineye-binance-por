@@ -45,12 +45,12 @@ Chainey 社群： 官网 chaineye.info | Chaineye Rust 教程 | 微信: LGZAXE, 
 
 在这个假设场景中，假设 Alice 向 Binance 存入了 10,000 BUSD，然后使用 4,000 BUSD 作为抵押品借入 2 BNB（以 1 BNB = 1,000 BUSD 的利率，假设 Binance 总是过度抵押）。下表显示了爱丽丝的资产负债表。
 
-[![table_1](https://github.com/0xchaineye/chaineye-binance-por/blob/main/images/table_1.png)](https://github.com/0xchaineye/chaineye-binance-por/)
+[![table_1](https://github.com/0xchaineye/chaineye-binance-por/blob/main/images/table-1.png)](https://github.com/0xchaineye/chaineye-binance-por/)
 
 
 如果 Alice 然后用 1 BNB 与 Bob（他也存入了 10,000 BUSD）交易 1,000 BUSD，交易匹配后他们的资产负债表将如下所示：
 
-[![table_2](https://github.com/0xchaineye/chaineye-binance-por/blob/main/images/table_2.png)](https://github.com/0xchaineye/chaineye-binance-por/)
+[![table_2](https://github.com/0xchaineye/chaineye-binance-por/blob/main/images/table-2.png)](https://github.com/0xchaineye/chaineye-binance-por/)
 
 
 在这种情况下，Alice 的 BNB 余额将达到 -1，这不是 Merkle 树中的有效节点，并且只包含一种资产：BNB。但是，如果我们查看总净余额，Alice 仍为 10,000。
