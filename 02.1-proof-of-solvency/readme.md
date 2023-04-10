@@ -47,19 +47,19 @@ CEX持有的资产等于每个用户净资产余额（权益-债务）的总和�
 
 ```
 type CexAssetInfo {
-	total_equity    u64
+  total_equity    u64
   total_debt      u64
   usdt_price      u64
 }
 
 type AssetInfo {
-	equity    u64
-	debt      u64
+   equity    u64
+   debt      u64
 }
 
 type CreateUserOp {
   before_account_tree_root  Hash
-	assets                    [ASSET_NUM]AssetInfo
+  assets                    [ASSET_NUM]AssetInfo
   after_account_tree_root   Hash
   account_index             u32
   account_proof             [ACCOUNT_TREE_DEPTH]Hash
@@ -68,7 +68,7 @@ type CreateUserOp {
 type AccountTreeLeafNode {
   equity_usdt          u64
   debt_usdt            u64
-	assets_commitment    Hash
+  assets_commitment    Hash
 }
 
 type CexAssetInfoList  [ASSET_NUM]CexAssetInfo
@@ -112,12 +112,12 @@ BatchCreateUserCircuit 用于生成账户树和所有账户负债的总和，电
 
 ```
 type BatchCreateUserCircuit struct {
-	before_account_tree_root         Hash
-	after_account_tree_root          Hash
+  before_account_tree_root         Hash
+  after_account_tree_root          Hash
   before_asset_list_commitment     Hash
   after_asset_list_commitment      Hash
   batch_commitment                 Hash `public`
-	before_asset_list                CexAssetInfoList
+  before_asset_list                CexAssetInfoList
   create_user_ops                  CreateUserOpList
 }
 ```
